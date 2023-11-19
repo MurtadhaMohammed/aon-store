@@ -15,10 +15,6 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const { searchKey, isOpen, setOpen, cart } = useAppStore();
 
-
-
-
-
   const getProducts = async () => {
     setIsLoading(true);
     try {
@@ -86,7 +82,9 @@ function App() {
 
               <div className="cart-action">
                 <Container>
-                  <button>Checkout - {Number(getTotalPrice()).toLocaleString("en")} $</button>
+                  <button>
+                    Checkout - {Number(getTotalPrice()).toLocaleString("en")} $
+                  </button>
                 </Container>
               </div>
             </div>
